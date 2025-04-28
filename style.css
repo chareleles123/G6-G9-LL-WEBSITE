@@ -1,0 +1,156 @@
+/* Reset basic margins */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and background setup */
+body {
+    height: 100vh;
+    background: linear-gradient(to bottom right, #74C0FC, #ffffff); /* Gradient background */
+    font-family: 'Palatino Linotype', serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    animation: fadeIn 1s ease; /* Fade-in animation for the body */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Logo */
+.logo {
+    font-size: 72px;
+    font-weight: 800;
+    color: #FF6347;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: transform 0.4s ease, color 0.4s ease; /* Smooth hover transition */
+}
+
+/* Hover effect for the logo */
+.logo:hover {
+    transform: scale(1.1); /* Scale up on hover */
+    color: #FF4500; /* Darker red color on hover */
+}
+
+/* Navigation Menu */
+.nav {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.nav button {
+    margin-left: 10px; /* Space between buttons */
+    padding: 10px 15px;
+    font-size: 16px;
+    color: white;
+    background-color: #d5006d; /* Button color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.nav button:hover {
+    background-color: #a4004d; /* Darker shade on hover */
+    transform: translateY(-3px); /* Lift effect on hover */
+}
+
+/* Content styles */
+.content {
+    padding: 20px;
+    color: #d5006d; /* Darker text color */
+    margin-top: 20px; /* Space above content */
+}
+
+h1 {
+    margin: 0; /* Remove default margin */
+    font-size: 36px; /* Increase font size for title */
+}
+
+p {
+    margin: 5px 0 20px; /* Space below the paragraph */
+    font-size: 18px; /* Font size for paragraph */
+}
+
+/* Box container */
+.box-container {
+    display: flex;
+    justify-content: space-around; /* Space boxes evenly */
+    width: 90%;
+    max-width: 1200px; /* Limit the width of the box container */
+    margin-top: 20px; /* Space above the boxes */
+}
+
+/* Rectangle styles */
+.rectangle {
+    width: 500px; /* Increased width for rectangles */
+    height: 300px; /* Increased height for rectangles */
+    background-color: rgba(255, 192, 203, 0.8); /* Light pink background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    font-size: 16px; /* Text size */
+    color: #d5006d; /* Text color */
+    margin: 10px; /* Space between rectangles */
+    opacity: 0; /* Start hidden */
+    animation: flow 1s forwards; /* Flow animation */
+    border-radius: 10px; /* Slightly rounded corners */
+    padding: 10px; /* Add padding for text */
+    box-sizing: border-box; /* Include padding in width calculation */
+    text-align: center; /* Center align text */
+}
+
+/* Animation for flowing in from the right */
+@keyframes flow {
+    0% {
+        transform: translateX(50px); /* Start from the right */
+        opacity: 0; /* Start hidden */
+    }
+    100% {
+        transform: translateX(0); /* Move to original position */
+        opacity: 1; /* Fully visible */
+    }
+}
+
+/* Delay for each rectangle to create a staggered effect */
+.rectangle:nth-child(1) {
+    animation-delay: 0s;
+}
+.rectangle:nth-child(2) {
+    animation-delay: 0.5s;
+}
+.rectangle:nth-child(3) {
+    animation-delay: 1s;
+}
+.rectangle:nth-child(4) {
+    animation-delay: 1.5s;
+}
+
+/* Stars */
+.stars {
+    color: gold; /* Star color */
+    font-size: 24px; /* Size of the stars */
+    margin-bottom: 10px; /* Space below stars */
+}
+
+/* Profile picture styles */
+.profile-pic {
+    width: 50px; /* Set width for profile pictures */
+    height: 50px; /* Set height for profile pictures */
+    border-radius: 50%; /* Make images circular */
+    margin-bottom: 10px; /* Space below the image */
+}

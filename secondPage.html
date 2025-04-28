@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedVid - Menu</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to bottom, #1E90FF, #87CEFA); /* Blue shaded background */
+            font-family: Arial, sans-serif;
+            position: relative; /* Allow positioning of the logo */
+        }
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 50px;
+            font-weight: bold;
+            color: pink; /* Logo color */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            text-decoration: none; /* Remove underline */
+            transition: transform 0.3s ease, color 0.3s ease; /* Smooth hover transition */
+        }
+
+        .logo:hover {
+            transform: scale(1.1);
+            color: #FF4500; /* Darker red color on hover */
+        }
+
+        .menu {
+            display: flex;
+            gap: 20px; /* Space between buttons */
+            opacity: 0; /* Start hidden */
+            transform: translateY(20px); /* Start below */
+            animation: fadeInUp 0.5s forwards; /* Fade in animation */
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1; /* Fully visible */
+                transform: translateY(0); /* Move to original position */
+            }
+        }
+
+        .menu button {
+            position: relative;
+            width: 300px;
+            padding: 20px 40px;
+            font-size: 24px;
+            font-weight: 600;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            border: none;
+            color: white;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Add transform transition */
+        }
+
+        .menu button:hover {
+            background-color: #FF4500; /* Darker red on hover */
+            transform: scale(1.05); /* Scale up on hover */
+        }
+
+        .icon {
+            position: absolute;
+            left: 10px; /* Adjust position */
+            top: 50%;
+            transform: translateY(-50%);
+            width: 30px; /* Icon size */
+            height: 30px; /* Icon size */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .about-icon {
+            background-image: url('https://img.icons8.com/ios/452/more.png');
+        }
+
+        .social-icon {
+            background-image: url('https://img.icons8.com/ios/452/youtube.png');
+        }
+
+        .testimonials-icon {
+            background-image: url('https://img.icons8.com/ios/452/person-talking.png');
+        }
+    </style>
+</head>
+<body>
+
+    <a href="indext.html" class="logo">MedVid</a> <!-- Home button disguised as the logo -->
+
+    <div class="menu">
+        <button onclick="location.href='thirdPage.html'">About Us</button> <!-- Link to thirdPage.html -->
+        <button onclick="alert('Social Media clicked')">Socials</button>
+        <button onclick="alert('Testimonials clicked')">Testimonials</button>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socials - MedVid</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome CDN -->
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to bottom, #1E90FF, #87CEFA); /* Blue shaded background */
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 50px;
+            font-weight: bold;
+            color: pink; /* Logo color */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            text-decoration: none; /* Remove underline */
+        }
+        .nav {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .nav button {
+            margin-left: 10px; /* Space between buttons */
+            padding: 10px 15px;
+            font-size: 16px;
+            color: white;
+            background-color: #d5006d; /* Button color */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .nav button:hover {
+            background-color: #a4004d; /* Darker shade on hover */
+        }
+        .content {
+            padding: 20px;
+            color: #d5006d; /* Darker text color */
+        }
+        .icon-container {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            max-width: 600px; /* Limit the width of the icon container */
+            margin-top: 20px; /* Space above the icons */
+        }
+        .icon {
+            font-size: 50px; /* Size of the icons */
+            color: #d5006d; /* Icon color */
+            transition: transform 0.3s, box-shadow 0.3s; /* Transition for animation */
+            cursor: pointer;
+            animation: bounce 2s infinite; /* Add bounce animation */
+        }
+        .icon:hover {
+            transform: scale(1.2); /* Scale up on hover */
+            box-shadow: 0 0 20px rgba(213, 0, 109, 0.7); /* Glowing effect */
+        }
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0); /* Original position */
+            }
+            50% {
+                transform: translateY(-10px); /* Bounce up */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="indext.html" class="logo">MedVid</a> <!-- Home button disguised as the logo -->
+
+    <div class="nav">
+        <button onclick="location.href='thirdPage.html'">About Us</button>
+        <button onclick="location.href='fourthPage.html'">Socials</button>
+        <button onclick="location.href='fifthPage.html'">Testimonials</button> <!-- Updated to link to fifthPage.html -->
+    </div>
+
+    <div class="content">
+        <h1>Connect with Us</h1>
+        <p>Follow us on our social media platforms for the latest updates!</p>
+        <div class="icon-container">
+            <a href="https://www.youtube.com/channel/UCwiqv5JxeNdseqVfrFHmiUg" target="_blank" class="icon">
+                <i class="fab fa-youtube"></i> <!-- YouTube Icon -->
+            </a>
+            <a href="https://www.instagram.com/med_vidyt?igsh=cHd4ZG96MHFrYmJn&utm_source=qr" target="_blank" class="icon">
+                <i class="fab fa-instagram"></i> <!-- Instagram Icon -->
+            </a>
+            <a href="https://www.tiktok.com/@charlessteggles?_t=ZS-8vt4b4BPrMt&_r=1" target="_blank" class="icon">
+                <i class="fab fa-tiktok"></i> <!-- TikTok Icon -->
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>

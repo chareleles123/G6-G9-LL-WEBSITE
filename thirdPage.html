@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - MedVid</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to bottom, #1E90FF, #87CEFA); /* Blue shaded background */
+            font-family: Arial, sans-serif;
+            text-align: center;
+            opacity: 0; /* Start hidden */
+            animation: fadeIn 1s forwards; /* Fade-in animation */
+        }
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 50px;
+            font-weight: bold;
+            color: pink; /* Logo color */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            text-decoration: none; /* Remove underline */
+        }
+        .nav {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .nav button {
+            margin-left: 10px; /* Space between buttons */
+            padding: 10px 15px;
+            font-size: 16px;
+            color: white;
+            background-color: #FF6347; /* Button color matching page 2 */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .nav button:hover {
+            background-color: #FF4500; /* Darker shade on hover */
+        }
+        .content {
+            padding: 20px;
+            color: #d5006d; /* Darker text color */
+        }
+        .boxes {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            max-width: 1200px;
+            margin-top: 80px; /* Space from the top */
+        }
+        .box {
+            background-color: rgba(255, 192, 203, 0.8); /* Light pink background for contrast */
+            border-radius: 15px;
+            padding: 20px;
+            width: 30%; /* Adjust width as needed */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        .box:hover {
+            transform: scale(1.05); /* Slightly enlarge on hover */
+        }
+        h1 {
+            font-size: 36px; /* Title size */
+            margin-bottom: 20px;
+            color: #d5006d; /* Darker title color */
+            animation: flow 2s infinite; /* Flow animation */
+        }
+        h2 {
+            font-size: 24px; /* Box title size */
+            color: #d5006d; /* Darker box title color */
+            animation: flow 2s infinite; /* Flow animation */
+            margin-bottom: 10px; /* Space between title and text */
+        }
+        p {
+            font-size: 18px; /* Text size */
+            color: #d5006d; /* Darker paragraph color */
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes flow {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-5px); /* Gentle upward movement */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="indext.html" class="logo">MedVid</a> <!-- Home button disguised as the logo -->
+
+    <div class="nav">
+        <button onclick="location.href='thirdPage.html'">About Us</button>
+        <button onclick="location.href='fourthPage.html'">Socials</button>
+        <button onclick="alert('Testimonials clicked')">Testimonials</button>
+    </div>
+
+    <div class="content">
+        <h1>About Us</h1>
+        <p>MedVid is dedicated to advancing medical technology and providing innovative solutions for healthcare professionals.</p>
+    </div>
+
+    <div class="boxes">
+        <div class="box">
+            <h2>Health Education</h2>
+            <p>Accessible health information through engaging podcasts.</p>
+        </div>
+        <div class="box">
+            <h2>Community Support</h2>
+            <p>Round-the-clock access to vital health resources.</p>
+        </div>
+        <div class="box">
+            <h2>Lasting Impact</h2>
+            <p>Creating sustainable change in Sitio Bebe.</p>
+        </div>
+    </div>
+
+</body>
+</html>
